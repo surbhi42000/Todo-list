@@ -1,7 +1,3 @@
-Certainly! Below is a README template for the provided Express.js and MongoDB code:
-
----
-
 # Todo List Web Application
 
 This is a simple web application for managing a todo list. The application is built using Node.js, Express.js, and MongoDB.
