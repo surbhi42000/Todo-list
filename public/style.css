@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --btn-bg: #12c0ff;
+    --btn-bg2: #000323;
+    --white: #fff;
+    --hover: #ec4f0c;
+    --bg: #d8d8d8;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 72px;
+    background: -webkit-linear-gradient(#2448b5, #250064);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form {
+    text-align: center;
+    margin: 1rem;
+    background-color: var(--btn-bg);
+    border: 2px solid var(--btn-bg);
+    border-radius: 2rem;
+    margin: 10px 0;
+    padding: .5rem;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2rem;
+    font-size: 16px;
+}
+
+button {
+    padding: .5rem;
+    text-decoration: none;
+    border: none;
+    background-color: var(--btn-bg2);
+    color: var(--white);
+    border-radius: 2rem;
+    cursor: pointer;
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.2rem;
+}
+
+
+.data-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.data-item {
+    background-color: #ffffff;
+    border: 2px solid var(--btn-bg);
+    border-radius: 2rem;
+    margin: 10px 0;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.data-text {
+    flex: 1;
+    align-self: center;
+    margin-left: .5rem;
+}
+
+.action-button {
+    text-align: center;
+    margin-left: 10px;
+    padding: .5rem;
+    text-decoration: none;
+    background-color: var(--btn-bg);
+    color: var(--white);
+    border-radius: 2rem;
+    font-size: 1rem;
+    width: 6rem;
+}
+
+.button{
+    text-decoration: none;
+}
+.button p {
+    text-align: center;
+    padding: .5rem;
+    text-decoration: none;
+    background-color: var(--btn-bg);
+    color: var(--white);
+    border-radius: 2rem;
+    font-size: 1rem;
+    width: 10rem;
+}
+
+button:hover{
+    background-color: var(--hover);
+}
+.action-button:hover{
+    background-color: var(--hover);
+}
+p:hover{
+    background-color: var(--hover);
+}
+.data-item:hover{
+    border: 2px solid var(--hover);
+}

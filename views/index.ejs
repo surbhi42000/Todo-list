@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>To-do List</h1>
+        <form action="/create" method="POST" class="form">
+            <input type="text" name="data" placeholder="Write new to-do">
+            <button type="submit"><iconify-icon icon="subway:add"></iconify-icon></button>
+        </form>
+        <ul class="data-list">
+            <% data.forEach(item => { %>
+                <li class="data-item">
+                    <span class="data-text"><%= item.data %></span>
+                    <a href="/update/<%= item._id %>" class="action-button"><iconify-icon icon="fa:edit"></iconify-icon></a>
+                    <a href="/delete/<%= item._id %>" class="action-button"><iconify-icon icon="typcn:delete"></iconify-icon></a>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Update Document</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+<body>
+    <h1>Update Document</h1>
+    <div class="container">
+        <form action="/update/<%= document._id %>" method="POST" class="form">
+            <input type="text" id="data" name="data" value="<%= document.data %>">
+            <button type="submit"><iconify-icon icon="dashicons:update-alt"></iconify-icon></button>
+        </form>
+        <a class="button" href="/"><p>Back to Home</p></a>
+    </div>
+</body>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+</html>
