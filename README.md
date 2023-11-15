@@ -1,66 +1,77 @@
-# CRUD App with MongoDB and Express
+# To-Do List App Readme
 
-This repository contains a simple CRUD (Create, Read, Update, Delete) web application built using Node.js, Express, and MongoDB. The application allows users to manage a list of tasks (todos) by adding, marking as done, and deleting them.
+This repository contains a simple To-Do List web application built using Node.js, Express.js, and MongoDB.
 
-## Prerequisites
+## Getting Started
 
-Before running the application, make sure you have the following installed:
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
 
 - [Node.js](https://nodejs.org/)
 - [MongoDB](https://www.mongodb.com/try/download/community)
 
-## Installation
+### Installation
 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/surbhi42000/Todo-list.git
+    git clone <repository_url>
     ```
 
-2. Navigate to the project directory:
-
-    ```bash
-    cd Todo-list
-    ```
-
-3. Install dependencies:
+2. Install dependencies:
 
     ```bash
     npm install
     ```
 
-## Configuration
+3. Start MongoDB:
 
-1. Ensure that MongoDB is running on your machine.
+    Make sure your MongoDB server is running. You can start it using the following command:
 
-2. Update the `mongoURI` variable in `index.js` with the appropriate MongoDB connection string:
-
-    ```javascript
-    const mongoURI = 'mongodb://localhost:27017/todo';
+    ```bash
+    mongod
     ```
+
+4. Start the application:
+
+    ```bash
+    npm start
+    ```
+
+    The application will be accessible at [http://localhost:3030](http://localhost:3030).
 
 ## Usage
 
-1. Start the application:
+- Access the application in your web browser at [http://localhost:3030](http://localhost:3030).
+- You can add tasks, mark them as done, and delete them.
 
-    ```bash
-    node index.js
-    ```
+## File Structure
 
-2. Open your browser and visit [http://localhost:3030](http://localhost:3030) to access the CRUD application.
-
-## Functionality
-
-- **View tasks**: Navigate to the home page to see a list of existing tasks.
-- **Add a task**: Use the provided form to add a new task to the list.
-- **Mark task as done**: Click the "Done" button next to a task to mark it as completed.
-- **Delete a task**: Click the "Delete" button to remove a task from the list.
+- `index.js`: Main entry point for the application.
+- `public/`: Contains static files (CSS, images, etc.).
+- `views/`: Contains EJS templates for rendering HTML pages.
 
 ## Dependencies
 
-- [Express](https://expressjs.com/): Web application framework for Node.js.
-- [MongoDB](https://www.mongodb.com/): NoSQL database for storing tasks.
-- [EJS](https://ejs.co/): Embedded JavaScript templating for rendering views.
+- [express](https://www.npmjs.com/package/express): Web application framework for Node.js.
+- [mongodb](https://www.npmjs.com/package/mongodb): MongoDB driver for Node.js.
+- [ejs](https://www.npmjs.com/package/ejs): Embedded JavaScript templating.
+
+## Database
+
+The application uses MongoDB to store tasks. The connection details are specified in `mongoURI` in `index.js`. Make sure your MongoDB server is running and accessible.
+
+## Routes
+
+- `GET /`: Displays the list of tasks.
+- `POST /add`: Adds a new task.
+- `POST /toggle`: Toggles the status of a task (done/undone).
+- `POST /delete`: Deletes a task.
+
+## Contributing
+
+Feel free to contribute by submitting issues or pull requests.
 
 ## License
 
